@@ -61,3 +61,10 @@ header > h1 {
 .card > i {
   font-size: 40px;
 }
+
+select {
+  /* border-right: black 1px solid; */
+  border: none;
+  color: black;
+  background-color: #b4e7f2;
+}
