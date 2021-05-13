@@ -119,5 +119,75 @@ listaIcone.forEach((icona) => {
                         <span>${icona.name}</span>
                     </div>`;
     document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
-    
+
+});
+
+
+
+document.getElementById("filter").addEventListener("click", function () {
+    let filter = document.getElementById("filter").value;
+    if (filter == "all") {
+        
+        document.getElementById("icone").innerHTML = "";
+
+        listaIcone.forEach((icona) => {
+        
+            const markup = `<div class="card">
+                                <i class="${icona.family} ${icona.prefix}${icona.name}" style="color: ${icona.colore}"></i>
+                                <span>${icona.name}</span>
+                            </div>`;
+            document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+        
+        });
+        
+
+    } else if (filter == "animal") {
+        
+        document.getElementById("icone").innerHTML = "";
+
+        listaIcone.forEach((icona) => {
+            
+            if (icona.type == "animal") {
+                const markup = `<div class="card">
+                                    <i class="${icona.family} ${icona.prefix}${icona.name}" style="color: ${icona.colore}"></i>
+                                    <span>${icona.name}</span>
+                                </div>`;
+                document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+            }
+            
+        });
+
+    } else if (filter == "vegetable") {
+
+        document.getElementById("icone").innerHTML = "";
+
+        listaIcone.forEach((icona) => {
+            
+            if (icona.type == "vegetable") {
+                const markup = `<div class="card">
+                                    <i class="${icona.family} ${icona.prefix}${icona.name}" style="color: ${icona.colore}"></i>
+                                    <span>${icona.name}</span>
+                                </div>`;
+                document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+            }
+            
+        });
+        
+    } else if (filter == "user") {
+
+        document.getElementById("icone").innerHTML = "";
+
+        listaIcone.forEach((icona) => {
+            
+            if (icona.type == "user") {
+                const markup = `<div class="card">
+                                    <i class="${icona.family} ${icona.prefix}${icona.name}" style="color: ${icona.colore}"></i>
+                                    <span>${icona.name}</span>
+                                </div>`;
+                document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+            }
+            
+        });
+        
+    }
 });
