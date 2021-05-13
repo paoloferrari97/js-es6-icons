@@ -103,3 +103,11 @@ const listaIcone = [
 		family: 'fas'
 	}
 ];
+
+listaIcone.forEach((icona) => {
+    const markup = `<div class="card">
+                        <i class="${icona.family} ${icona.prefix}${icona.name}"></i>
+                        <span>${icona.name}</span>
+                    </div>`;
+    document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+});
