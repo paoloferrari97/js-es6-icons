@@ -105,9 +105,19 @@ const listaIcone = [
 ];
 
 listaIcone.forEach((icona) => {
+
+    if (icona.type === "animal") {
+        icona.colore = "#0000ff";
+    } else if (icona.type === "vegetable") {
+        icona.colore = "#ffa500";
+    } else if (icona.type === "user") {
+        icona.colore = "#800080";
+    }
+
     const markup = `<div class="card">
-                        <i class="${icona.family} ${icona.prefix}${icona.name}"></i>
+                        <i class="${icona.family} ${icona.prefix}${icona.name}" style="color: ${icona.colore}"></i>
                         <span>${icona.name}</span>
                     </div>`;
     document.getElementById("icone").insertAdjacentHTML("beforeend", markup);
+    
 });
