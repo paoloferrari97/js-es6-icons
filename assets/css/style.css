@@ -67,4 +67,5 @@ select {
   border: none;
   color: black;
   background-color: #b4e7f2;
+  outline: none;
 }
