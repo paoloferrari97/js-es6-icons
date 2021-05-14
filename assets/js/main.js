@@ -125,7 +125,8 @@ listaIcone.forEach((icona) => {
 
 
 document.getElementById("filter").addEventListener("click", function () {
-    let filter = document.getElementById("filter").value;
+    //let filter = document.getElementById("filter").value;
+	let filter = this.value; //this in addEventListener funziona se metto la funzione anonima, con arrow function non funziona
     if (filter == "all") {
         
         document.getElementById("icone").innerHTML = "";
